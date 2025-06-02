@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,i=1,j;
+    printf("a:");
+    scanf("%d",&a);
+    j:
+        printf("%d\n",i);
+        i++;
+        if(i<=a)
+        {
+            goto j;
+        }
+    return 0;
+}
