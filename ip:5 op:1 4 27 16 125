@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    printf("a:");
+    scanf("%d",&a);
+    for(int i=1;i<=a;i++)
+    {
+        int n=0;
+        if(i%2!=0)
+        {
+            n=i*i*i;
+            printf("%d ",n);
+        }
+        if(i%2==0)
+        {
+            n=i*i;
+            printf("%d ",n);
+        }
+    }
+}
