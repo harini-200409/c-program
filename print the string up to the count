@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+    int fun(char *name,int i)
+    {
+        if(i<5)
+        {
+            i++;
+            printf("%s\n",name);
+            fun(name,i);
+        }
+    }
+    int main()
+    {
+        int i=0;
+        char name[10];
+        printf("enter the name:");
+        scanf("%s",name);
+        fun(name,i);
+    }
+    
