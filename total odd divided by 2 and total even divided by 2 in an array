@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,k;
+    scanf("%d",&k);
+    int arr[k],osum=0,esum=0,et=0,ot=0;
+     printf("enter the elements:\n");
+    for(i=0;i<k;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<k;i++)
+    {
+       if(arr[i]%2==0)
+       {
+           esum=esum+arr[i];
+           et=esum/2;
+       } 
+       if(arr[i]%2!=0)
+       {
+           osum=osum+arr[i];
+           ot=osum/2;
+       }
+    }
+    printf("\n");
+    printf("%d\n",et);
+    printf("%d\n",ot);
+    return 0;  
+}
