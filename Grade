@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,sub=0,mark;
+    printf("a:");
+    scanf("%d",&a);
+    int max=25;
+    for(int i=0;i<a;i++)
+    {
+        printf("mark:");
+        scanf("%d",&mark);
+        if(mark<=25)
+        {
+           sub=sub+mark;
+        }
+        else
+        {
+            printf("invalid input\n");
+            break;
+        }
+    }
+    if(sub>=90)
+    {
+        printf("GRADE A\n");
+    }
+    else if(sub>=80&&sub<90)
+    {
+        printf("GRADE B\n");
+    }
+    else if(sub>=60&&sub<80)
+    {
+        printf("GRADE C\n");
+    }
+    else
+    {
+        printf("GRADE D\n");
+    }
+    return 0;
+}
