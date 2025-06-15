@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main()
+{
+    int size;
+    printf("size of the array:");
+    scanf("%d",&size);
+    int arr[size],earr[100],oarr[100];
+    int i,e=0,o=0;
+    printf("arr elements:\n");
+    for(i=0;i<size;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<size;i++)
+    {
+        if(arr[i]%2==0)
+        {
+            earr[e++]=arr[i];
+        }
+        else
+        {
+            oarr[o++]=arr[i];
+        }
+    }
+    printf("even array\n");
+    for(i=0;i<e;i++)
+    {
+        printf("%d",earr[i]);
+    }
+    printf("\nodd array\n");
+    for(i=0;i<o;i++)
+    {
+        printf("%d",oarr[i]);
+    }
+    return 0;
+}
