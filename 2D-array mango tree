@@ -1,0 +1,55 @@
+#include<stdio.h>
+int main()
+{
+    int r,c,num;
+    int i,j;
+    int found;
+    scanf("%d",&num);
+    scanf("%d %d",&r,&c);
+    int mat[r][c];
+    int tra[c][r];
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            scanf("%d",&mat[i][j]);
+            if(mat[i][j]==num)
+                found=1;
+        }
+    }
+
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            tra[j][i]=mat[i][j];
+        }
+    }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("%d ",tra[i][j]);
+        }
+        printf("\n");
+    }
+    if(!found)
+    {
+        printf("invalid input\n");
+    }
+    int mango = 0;
+   
+    for(int i = 0; i < c; i++) {
+        if(r > 1 && (tra[i][1] == num || tra[i][c-2] == num)) {
+            mango = 1;
+            break;
+        }
+    }
+
+    if(mango)
+        printf("Mango tree\n");
+    else 
+        printf("Not mango tree\n");
+
+    return 0;
+}
